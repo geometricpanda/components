@@ -1,0 +1,9 @@
+.hello-world {
+  color: red;
+}
+
+@media (--viewport-md) {
+  .hello-world {
+    color: blue;
+  }
+}

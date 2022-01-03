@@ -1,0 +1,5 @@
+@custom-media --viewport-xs (width >= 20em); /** 320px */
+@custom-media --viewport-sm (width >= 38em); /** 608px */
+@custom-media --viewport-md (width >= 45em); /** 720px */
+@custom-media --viewport-lg (width >= 64em); /** 1024px */
+@custom-media --viewport-xl (width >= 80em); /** 1380px */
