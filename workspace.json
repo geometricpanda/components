@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "application": "apps/application",
-    "application-e2e": "apps/application-e2e"
+    "application-e2e": "apps/application-e2e",
+    "react-components": "libs/react-components"
   }
 }
