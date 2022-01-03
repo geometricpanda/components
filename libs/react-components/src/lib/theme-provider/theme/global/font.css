@@ -1,5 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
 :root {
   --theme-font-family: 'Poppins', sans-serif;
+  --theme-font-weight-light: 400;
+  --theme-font-weight-regular: 500;
+  --theme-font-weight-bold: 600;
+
+  --theme-font-size-base: 1rem;
+  --theme-font-letter-spacing-base: -0.5px;
+  --theme-line-height-base: 1.5rem;
 }

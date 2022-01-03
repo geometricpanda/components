@@ -1,20 +1,21 @@
-import type {ReactNode} from 'react';
-import classNames from 'classnames';
+import {forwardRef} from 'react';
+import type {ComponentPropsWithoutRef} from 'react';
+import {ButtonBaseProps, useClassName} from './button.common';
 
-import styles from './button.module.css';
-
-export interface ButtonProps {
-  children: ReactNode,
-  /** Configures the colour of the button */
-  variant?: 'primary' | 'secondary',
+export interface ButtonProps extends ButtonBaseProps,
+  Omit<ComponentPropsWithoutRef<'button'>, 'className'> {
 }
 
-export const Button = ({children, variant}: ButtonProps) => (
-  <button
-    className={classNames({
-      [styles['g-button']]: true,
-      [styles['g-button--secondary']]: variant === 'secondary',
-    })}>
-    {children}
-  </button>
-)
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
+                                                                    children,
+                                                                    variant,
+                                                                    outline,
+                                                                    ...props
+                                                                  }, ref) => {
+  const className = useClassName({variant, outline});
+  return (
+    <button className={className} ref={ref} {...props}>
+      {children}
+    </button>
+  )
+});

@@ -1,9 +1,11 @@
-import type {FC} from 'react';
+import type {ReactNode} from 'react';
 import './theme';
 
-export const ThemeProvider: FC = ({children}) => (
-  <>
-    {children}
-  </>
+export interface ThemeProviderProps {
+  children: ReactNode
+}
+
+export const ThemeProvider = ({children}: ThemeProviderProps) => (
+  {children}
 );
 

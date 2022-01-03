@@ -1,15 +1,22 @@
 .g-button {
-  display: flex;
-  border: 0;
-  background-color: var(--theme-color-primary);
-  color: var(--theme-color-primary-contrast);
-  padding-block: var(--theme-spacing-sm);
-  padding-inline: var(--theme-spacing-lg);
-  font-size: 1.5rem;
+  --button-background-color: var(--theme-color-primary);
+  --button-color: var(--theme-color-primary-contrast);
+
+  display: inline-flex;
+  border: var(--theme-border-width) solid var(--button-background-color);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  padding-block: var(--theme-spacing-xs);
+  padding-inline: var(--theme-spacing-md);
+  font-size: var(--theme-font-size-base);
+  line-height: var(--theme-line-height-base);
   font-family: var(--theme-font-family);
-  letter-spacing: -.75px;
+  font-weight: var(--theme-font-weight-regular);
+  letter-spacing: var(--theme-font-letter-spacing-base);
   cursor: pointer;
   border-radius: 50px;
+  transition: all var(--theme-transition-timing-fast);
+  text-decoration: none;
 }
 
 .g-button:focus-visible {
@@ -19,6 +26,11 @@
 }
 
 .g-button--secondary {
-  background-color: var(--theme-color-secondary);
-  color: var(--theme-color-secondary-contrast);
+  --button-background-color: var(--theme-color-secondary);
+  --button-color: var(--theme-color-secondary-contrast);
+}
+
+.g-button--outline {
+  background-color: var(--button-color);
+  color: var(--button-background-color);
 }
