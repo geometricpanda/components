@@ -1,4 +1,7 @@
+# Links
 
+[Chromatic](https://www.chromatic.com/library?appId=61d2a80d1897c4003a521e3c)
+[![codecov](https://codecov.io/gh/geometricpanda/components/branch/main/graph/badge.svg?token=UHQHXCJ7L2)](https://codecov.io/gh/geometricpanda/components)
 
 # GeometricpandaComponents
 

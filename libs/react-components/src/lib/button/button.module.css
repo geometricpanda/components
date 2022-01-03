@@ -1,0 +1,36 @@
+.g-button {
+  --button-background-color: var(--theme-color-primary);
+  --button-color: var(--theme-color-primary-contrast);
+
+  display: inline-flex;
+  border: var(--theme-border-width) solid var(--button-background-color);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  padding-block: var(--theme-spacing-xs);
+  padding-inline: var(--theme-spacing-md);
+  font-size: var(--theme-font-size-base);
+  line-height: var(--theme-line-height-base);
+  font-family: var(--theme-font-family);
+  font-weight: var(--theme-font-weight-regular);
+  letter-spacing: var(--theme-font-letter-spacing-base);
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all var(--theme-transition-timing-fast);
+  text-decoration: none;
+}
+
+.g-button:focus-visible {
+  outline: var(--theme-focus-outline);
+  outline-offset: var(--theme-focus-outline-offset);
+  box-shadow: var(--theme-focus-box-shadow);
+}
+
+.g-button--secondary {
+  --button-background-color: var(--theme-color-secondary);
+  --button-color: var(--theme-color-secondary-contrast);
+}
+
+.g-button--outline {
+  background-color: var(--button-color);
+  color: var(--button-background-color);
+}
