@@ -1,0 +1,13 @@
+:root {
+  --theme-transition-timing-fast: 100ms ease-out;
+  --theme-transition-timing-medium: 200ms ease-out;
+  --theme-transition-timing-normal: 300ms ease-out;
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --theme-transition-timing-fast: 0;
+    --theme-transition-timing-medium: 0;
+    --theme-transition-timing-normal: 0;
+  }
+}

@@ -1,0 +1,8 @@
+:root {
+  --theme-focus-box-shadow:
+    0 0 0px 2px var(--theme-color-90),
+    0 0 0px 4px var(--theme-color-primary);
+
+  --theme-focus-outline: 2px solid transparent;
+  --theme-focus-outline-offset: 2px;
+}
