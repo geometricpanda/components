@@ -1,4 +1,24 @@
 .g-button {
   display: flex;
-  background-color: rebeccapurple;
+  border: 0;
+  background-color: var(--theme-color-primary);
+  color: var(--theme-color-primary-contrast);
+  padding-block: var(--theme-spacing-sm);
+  padding-inline: var(--theme-spacing-lg);
+  font-size: 1.5rem;
+  font-family: var(--theme-font-family);
+  letter-spacing: -.75px;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.g-button:focus-visible {
+  outline: var(--theme-focus-outline);
+  outline-offset: var(--theme-focus-outline-offset);
+  box-shadow: var(--theme-focus-box-shadow);
+}
+
+.g-button--secondary {
+  background-color: var(--theme-color-secondary);
+  color: var(--theme-color-secondary-contrast);
 }

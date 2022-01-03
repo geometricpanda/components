@@ -1,8 +1,24 @@
-import {Meta} from '@storybook/react';
+import {Meta, ComponentStory} from '@storybook/react';
+import type {ButtonProps} from './button.component';
 import {Button} from './button.component';
 
 export default {
-  component: Button
+  component: Button,
+  argTypes: {
+    variant: {
+      control: {
+        type: 'select',
+      },
+    },
+  },
 } as Meta;
 
-export const Primary = () => <Button>Hello World</Button>
+const Template: ComponentStory<typeof Button> = (args: ButtonProps) =>
+  <Button {...args}>Hello World</Button>
+
+export const Primary = Template.bind({});
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: 'secondary',
+}
