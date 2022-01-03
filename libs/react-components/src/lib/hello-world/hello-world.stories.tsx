@@ -2,7 +2,7 @@ import {Meta} from '@storybook/react';
 import { HelloWorld } from './hello-world.component';
 
 export default {
-  title: 'Hello World',
+  component: HelloWorld,
 } as Meta;
 
 export const Default = () => <HelloWorld/>

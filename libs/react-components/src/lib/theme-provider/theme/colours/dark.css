@@ -1,0 +1,21 @@
+:root {
+  --theme-color-primary: #90caf9;
+  --theme-color-primary-contrast: #37474f;
+
+  --theme-color-secondary: #c8e6c9;
+  --theme-color-secondary-contrast: #37474f;
+
+  --theme-color-0: #fff;
+  --theme-color-10: #fafafa;
+  --theme-color-20: #cfd8dc;
+  --theme-color-30: #a3b4bc;
+  --theme-color-40: #859ca7;
+  --theme-color-80: #34495E;
+  --theme-color-90: #263238;
+  --theme-color-100: #000;
+
+  --theme-color-warning: #ff8A65;
+  --theme-color-success: #81c784;
+  --theme-color-error: #ef5350;
+  --theme-color-info: #64b5f6;
+}
