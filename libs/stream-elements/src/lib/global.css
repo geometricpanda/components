@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+.c-logo {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.st0 {
+  fill: #48ABE1;
+}
+
+.st1 {
+  opacity: 0.1;
+}
+
+.st2 {
+  fill: #253644;
+}
+
+.st3 {
+  fill: #68338A;
+}
+
+.st4 {
+  fill: #FFD802;
+}
+
+.st5 {
+  fill: #613A16;
+}
+
+.st6 {
+  fill: #FFFFFF;
+}
+
+.st7 {
+  fill: #F4AEC7;
+}
+
+.st8 {
+  fill: #7DCCE5;
+}
+
+.st9 {
+  fill: #0E8236;
+}
+
+.st10 {
+  fill: #6F2282;
+}
+
+.st11 {
+  fill: #E30D13;
+}
+
+.st12 {
+  fill: #FCEA21;
+}
+
+.st13 {
+  fill: #F28C1B;
+}
+
+.st14 {
+  fill: #3157A4;
+}
+
+.st15 {
+  fill: #E8318A;
+}
+
+.st16 {
+  fill: #020203;
+}
+
+.st17 {
+  opacity: 0.3;
+}
+
+.st18 {
+  opacity: 0.15;
+}
+
+.st19 {
+  fill: #FFD803;
+}
+
+.st20 {
+  opacity: 0.35;
+}
+
+.st21 {
+  fill: #C00D61;
+}
+
+
+.c-container {
+  overflow: hidden;
+
+  animation-name: fade-out;
+  animation-fill-mode: forwards;
+  animation-delay: 4000ms;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  transform-origin: top;
+  padding: 1rem;
+}
+
+.c-container__grid {
+  background-color: white;
+  padding: 2rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  box-shadow: 3rem 3rem 0 #0038A8, -3rem -3rem 0 #D60270;
+
+  animation-name: banner;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.c-container__image {
+  animation-name: panda;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.c-container__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.c-container__message {
+  animation-name: name;
+  animation-fill-mode: forwards;
+  animation-delay: 500ms;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.c-container__text {
+  font-family: 'Poppins', sans-serif;
+  word-break: break-word;
+  transform-origin: left;
+
+  transform: scale(0);
+  animation-name: text;
+  animation-fill-mode: forwards;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.c-container__text--name {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: #D60270;
+  animation-delay: 300ms;
+
+}
+
+.c-container__text--message {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.75px;
+  line-height: 4rem;
+  color: #0038A8;
+  animation-delay: 450ms;
+}
+
+@keyframes banner {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes panda {
+  0% {
+    transform: rotate(-15deg) scale(1);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(-15deg) scale(1);
+  }
+}
+
+@keyframes text {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.2)
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    /*opacity: 0;*/
+    /*transform: translateY(-100%) scale(0);*/
+  }
+}

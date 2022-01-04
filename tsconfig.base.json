@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@geometricpanda-components/stream-elements": [
+        "libs/stream-elements/src/index.ts"
+      ],
       "@geometricpanda/react-components": ["libs/react-components/src/index.ts"]
     }
   },

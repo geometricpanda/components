@@ -3,6 +3,7 @@
   "projects": {
     "application": "apps/application",
     "application-e2e": "apps/application-e2e",
-    "react-components": "libs/react-components"
+    "react-components": "libs/react-components",
+    "stream-elements": "libs/stream-elements"
   }
 }
