@@ -18,6 +18,9 @@
   "devDependencies": {
     "@babel/core": "7.12.13",
     "@babel/preset-typescript": "7.12.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@nrwl/cli": "13.4.2",
     "@nrwl/cypress": "13.4.2",
     "@nrwl/eslint-plugin-nx": "13.4.2",

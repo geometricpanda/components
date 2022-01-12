@@ -3,11 +3,14 @@
   --button-color: var(--theme-color-primary-contrast);
 
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--theme-spacing-xs);
   border: var(--theme-border-width) solid var(--button-background-color);
   background-color: var(--button-background-color);
   color: var(--button-color);
   padding-block: var(--theme-spacing-xs);
-  padding-inline: var(--theme-spacing-md);
+  padding-inline: var(--theme-spacing-lg);
   font-size: var(--theme-font-size-base);
   line-height: var(--theme-line-height-base);
   font-family: var(--theme-font-family);
@@ -15,7 +18,8 @@
   letter-spacing: var(--theme-font-letter-spacing-base);
   cursor: pointer;
   border-radius: 50px;
-  transition: all var(--theme-transition-timing-fast);
+  transition: var(--theme-transition-timing-fast);
+  transition-property: background-color, color, box-shadow;
   text-decoration: none;
 }
 
@@ -33,4 +37,31 @@
 .g-button--outline {
   background-color: var(--button-color);
   color: var(--button-background-color);
+}
+
+.g-button--media-only {
+  padding: var(--theme-spacing-md);
+}
+
+.g-button--media-only .g-button__content {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.g-button--media-reverse {
+  flex-direction: row-reverse;
+}
+
+.g-button__content {
+  display: flex;
+}
+
+.g-button__media {
+  display: flex;
 }

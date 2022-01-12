@@ -1,0 +1,36 @@
+.g-icon {
+  --icon-size: 1.5rem;
+  --icon-padding: 0.125rem;
+  --icon-font-size: calc(var(--icon-size) - (var(--icon-padding) * 2));
+
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--icon-font-size);
+  height: var(--icon-size);
+  width: var(--icon-size);
+  padding: var(--icon-padding);
+}
+
+.g-icon--sm {
+  --icon-padding: 0.0625rem;
+  --icon-size: 1rem;
+}
+
+.g-icon--md {
+  --icon-padding: 0.125rem;
+  --icon-size: 1.5rem;
+}
+
+.g-icon--lg {
+  --icon-padding: 0.1875rem;
+  --icon-size: 2rem;
+}
+
+.g-icon--xl {
+  --icon-padding: 0.25rem;
+  --icon-size: 2.5rem;
+}
+
