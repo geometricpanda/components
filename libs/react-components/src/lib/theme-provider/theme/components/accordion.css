@@ -1,0 +1,8 @@
+:root {
+  --theme-accordion-color: var(--theme-color-primary);
+  --theme-accordion-color-contrast: var(--theme-color-primary-contrast);
+  --theme-accordion-disabled-color: var(--theme-color-40);
+  --theme-accordion-diabled-color-contrast: var(--theme-color-70);
+  --theme-accordion-background-color: var(--theme-color-90);
+
+}

@@ -1,35 +1,37 @@
 import type {ComponentStory, Meta} from '@storybook/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faCheck} from '@fortawesome/free-solid-svg-icons'
 
-import {Icon, IconProps} from './icon.component';
+import type {IconProps} from './';
+import {Icon} from './';
 
 export default {
+  title: 'Content / Icon',
   component: Icon,
 } as Meta;
 
 const Template: ComponentStory<typeof Icon> = (args: IconProps) => (
   <Icon {...args}>
-    <FontAwesomeIcon icon={faCheck} />
+    <FontAwesomeIcon icon={faCheck}/>
   </Icon>
 )
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'sm'
+  size: 'sm',
 }
 
 export const Medium = Template.bind({});
 Medium.args = {
-  size: 'md'
+  size: 'md',
 }
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 'lg'
+  size: 'lg',
 }
 
 export const ExtraLarge = Template.bind({});
 ExtraLarge.args = {
-  size: 'xl'
+  size: 'xl',
 }

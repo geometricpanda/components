@@ -1,0 +1,10 @@
+:root {
+  --theme-icon-size-sm: 1rem;
+  --theme-icon-size-md: 1.5rem;
+  --theme-icon-size-lg: 2rem;
+  --theme-icon-size-xl: 2.5rem;
+  --theme-icon-padding-sm: 0.0625rem;
+  --theme-icon-padding-md: 0.125rem;
+  --theme-icon-padding-lg: 0.1875rem;
+  --theme-icon-padding-xl: 0.25rem;
+}

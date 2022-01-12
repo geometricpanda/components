@@ -1,17 +1,31 @@
 import {Meta, ComponentStory} from '@storybook/react';
-import type {ButtonAnchorProps} from './button-anchor.component';
-import {ButtonAnchor} from './button-anchor.component';
-import {Icon} from '../icon/icon.component';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCheck} from '@fortawesome/free-solid-svg-icons';
 
+import type {ButtonAnchorProps} from './button-anchor.component';
+import {ButtonAnchor} from './button-anchor.component';
+import {Icon} from '../icon';
+
 export default {
+  title: 'Call To Action / Button Anchor',
   component: ButtonAnchor,
   argTypes: {
+    media: {
+      control: false,
+    },
+    mediaOnly: {
+      control: false,
+    },
+    mediaReverse: {
+      control: false,
+    },
+    outline: {
+      control: 'boolean',
+      defaultValue: false,
+    },
     variant: {
-      control: {
-        type: 'select',
-      },
+      control: 'select',
+      defaultValue: 'primary',
     },
   },
 } as Meta;
