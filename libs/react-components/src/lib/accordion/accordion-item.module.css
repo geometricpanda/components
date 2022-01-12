@@ -1,0 +1,93 @@
+
+.g-accordion-item {
+}
+
+.g-accordion-item--expanded {
+}
+
+.g-accordion-item__head {
+  background-color: var(--theme-color-primary);
+  display: flex;
+  width: 100%;
+  padding: var(--theme-spacing-md);
+  border: 2px solid var(--theme-color-primary);
+  gap: var(--theme-spacing-md);
+  margin: 0;
+  cursor: pointer;
+}
+
+.g-accordion-item:first-child .g-accordion-item__head {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.g-accordion-item:not(:first-child) .g-accordion-item__head {
+  border-top: 0;
+}
+
+.g-accordion-item:not(.g-accordion-item--expanded):last-child .g-accordion-item__head {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.g-accordion-item__head:focus{
+  outline: 0;
+}
+
+.g-accordion-item__head:focus .g-accordion-item__title {
+  outline: 2px solid var(--theme-color-primary-contrast);
+  outline-offset: 2px;
+}
+
+.g-accordion-item__icon {
+  transition: transform 150ms ease-out;
+  transform-origin: center;
+  color: var(--theme-color-primary-contrast);
+}
+
+.g-accordion-item--expanded .g-accordion-item__icon {
+  transform: rotate(90deg);
+}
+
+.g-accordion-item__title {
+  font-size: var(--theme-font-size-base);
+  line-height: var(--theme-line-height-base);
+  font-family: var(--theme-font-family);
+  font-weight: var(--theme-font-weight-regular);
+  letter-spacing: var(--theme-font-letter-spacing-base);
+  color: var(--theme-color-primary-contrast);
+  text-align: left;
+  margin-block: -0.125rem;
+}
+
+.g-accordion-item__body {
+  max-height: 0;
+  background-color: var(--theme-color-90);
+  border: 2px solid var(--theme-color-primary-contrast);
+  border-top: 0;
+}
+
+.g-accordion-item--expanded .g-accordion-item__body {
+  max-height: max-content;
+  border-color: var(--theme-color-primary);
+}
+
+.g-accordion-item--expanded:last-child .g-accordion-item__body {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px
+}
+
+.g-accordion-item__content {
+  padding: var(--theme-spacing-md);
+  visibility: hidden;
+}
+
+.g-accordion-item--expanded .g-accordion-item__content {
+  visibility: visible;
+}
+
+@media (--viewport-md) {
+  .g-accordion-item__content {
+    padding-left: calc(var(--theme-spacing-md) + var(--theme-spacing-md) + 1rem);
+  }
+}
