@@ -32,11 +32,14 @@ export const AccordionItem = ({
 
     <button className={styles['g-accordion-item__head']}
             type={'button'}
+            aria-expanded={expanded}
+            aria-controls={`${id}-content`}
             id={id}
             onClick={onChange}
             disabled={disabled || undefined}>
 
-      <span className={styles['g-accordion-item__icon']}>
+      <span className={styles['g-accordion-item__icon']}
+            aria-hidden={true}>
         <Icon size={'sm'}>
           <FontAwesomeIcon icon={faChevronRight}/>
         </Icon>
@@ -50,6 +53,8 @@ export const AccordionItem = ({
 
 
     <div className={styles['g-accordion-item__body']}
+         role={'region'}
+         aria-labelledby={id}
          id={`${id}-content`}>
 
       <div className={styles['g-accordion-item__content']}>

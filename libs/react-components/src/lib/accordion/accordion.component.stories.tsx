@@ -32,45 +32,39 @@ const Template: ComponentStory<typeof AccordionItem> = (args: AccordionItemProps
 
   return (
     <Accordion>
-      <AccordionItem id='first'
+      <AccordionItem id="first"
                      title={title}
                      expanded={expanded}
                      onChange={handleFirstChange}
                      disabled={disabled}>
         <p style={{margin: 0, padding: 0}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras neque urna, vehicula nec ligula sed, mattis
-          aliquet ante. Aliquam pellentesque placerat arcu. Mauris quis nunc euismod, bibendum diam et, euismod risus.
-          Donec fermentum <a href={'#'}>enim risus</a>, nec malesuada dui interdum eget. Maecenas nec pharetra velit.
-          Cras vel viverra nisl. Nullam placerat ante rutrum, aliquet elit mollis, gravida sem. Aliquam in elit auctor,
-          ultricies lectus quis, dictum metus. Mauris scelerisque porttitor metus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Cras neque urna, vehicula nec ligula sed, mattis
+          aliquet ante. <a href={'#'}>enim risus</a>.
         </p>
       </AccordionItem>
 
-      <AccordionItem id='second'
+      <AccordionItem id="second"
                      title={'Item 2'}
                      expanded={expandedSecond}
                      onChange={handleSecondChange}
                      disabled={disabled}>
         <p style={{margin: 0, padding: 0}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras neque urna, vehicula nec ligula sed, mattis
-          aliquet ante. Aliquam pellentesque placerat arcu. Mauris quis nunc euismod, bibendum diam et, euismod risus.
-          Donec fermentum <a href={'#'}>enim risus</a>, nec malesuada dui interdum eget. Maecenas nec pharetra velit.
-          Cras vel viverra nisl. Nullam placerat ante rutrum, aliquet elit mollis, gravida sem. Aliquam in elit auctor,
-          ultricies lectus quis, dictum metus. Mauris scelerisque porttitor metus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Cras neque urna, vehicula nec ligula sed, mattis
+          aliquet ante. <a href={'#'}>enim risus</a>.
         </p>
       </AccordionItem>
 
-      <AccordionItem id='third'
+      <AccordionItem id="third"
                      title={'Item 3'}
                      expanded={expandedThird}
                      onChange={handleThirdChange}
                      disabled={disabled}>
         <p style={{margin: 0, padding: 0}}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras neque urna, vehicula nec ligula sed, mattis
-          aliquet ante. Aliquam pellentesque placerat arcu. Mauris quis nunc euismod, bibendum diam et, euismod risus.
-          Donec fermentum <a href={'#'}>enim risus</a>, nec malesuada dui interdum eget. Maecenas nec pharetra velit.
-          Cras vel viverra nisl. Nullam placerat ante rutrum, aliquet elit mollis, gravida sem. Aliquam in elit auctor,
-          ultricies lectus quis, dictum metus. Mauris scelerisque porttitor metus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Cras neque urna, vehicula nec ligula sed, mattis
+          aliquet ante. <a href={'#'}>enim risus</a>.
         </p>
       </AccordionItem>
     </Accordion>
