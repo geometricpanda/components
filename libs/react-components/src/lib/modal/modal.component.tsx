@@ -1,4 +1,13 @@
-import {ReactNode, useEffect, useRef, useState} from 'react';
+import {
+  KeyboardEvent,
+  KeyboardEventHandler,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import FocusTrap from 'focus-trap-react';
 import {hideOthers} from 'aria-hidden';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -8,8 +17,7 @@ import {generateUniqueId} from '../utils/generate-unique-id';
 import {Icon} from '../icon';
 import {noop} from '../utils/noop';
 import styles from './modal.module.css';
-import {createPortal} from 'react-dom';
-import {useLockBodyScroll, useToggle} from 'react-use';
+import {useKey, useLockBodyScroll, useToggle} from 'react-use';
 import classNames from 'classnames';
 
 export interface ModalProps {
@@ -21,32 +29,55 @@ export interface ModalProps {
 }
 
 export const Modal = ({
-  id = generateUniqueId('modal'),
+  id,
   title,
   children,
   align = 'center',
   doClose = noop,
 }: ModalProps) => {
 
-  const ref = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const modalContentRef = useRef<HTMLDivElement>(null);
   const [prevFocus, setPrevFocus] = useState<HTMLElement>();
+  const [modalId] = useState(id || generateUniqueId('modal'))
   const [locked, toggleLocked] = useToggle(false);
   useLockBodyScroll(locked);
+  useKey('Escape', doClose);
 
-  useEffect(() => {
-    if (!ref.current) return;
+
+  useLayoutEffect(() => {
+    if (!modalRef.current) return;
     setPrevFocus(document.activeElement as HTMLElement);
-    const timeout = setTimeout(() => ref.current?.focus(), 150);
-    const undo = hideOthers(ref.current);
+    const timeout = setTimeout(() => modalRef.current?.focus(), 150);
+    const undo = hideOthers(modalRef.current);
     toggleLocked(true);
 
     return () => {
       if (timeout) clearTimeout(timeout);
       toggleLocked(false);
       undo();
-
     }
-  }, [ref, setPrevFocus, toggleLocked]);
+  }, [modalRef, setPrevFocus, toggleLocked]);
+
+
+  const handleModalKeydown: KeyboardEventHandler<HTMLDivElement> =
+    useCallback(($event: KeyboardEvent<HTMLDivElement>) => {
+      if ($event.target !== modalRef.current) {
+        return;
+      }
+
+      switch ($event.key) {
+        case 'ArrowUp':
+          modalContentRef.current?.scrollBy({top: -40, behavior: 'smooth'});
+          break;
+        case 'ArrowDown':
+          modalContentRef.current?.scrollBy({top: 40, behavior: 'smooth'});
+          break;
+        default:
+          break;
+      }
+
+    }, [modalContentRef]);
 
   useEffect(() => {
     return () => {
@@ -59,36 +90,39 @@ export const Modal = ({
   return (
     <div className={styles['g-modal']}>
       <div className={styles['g-modal__backdrop']}/>
+
       <FocusTrap active
                  focusTrapOptions={{
                    initialFocus: false,
-                   onDeactivate: doClose,
+                   escapeDeactivates: false,
                  }}>
 
         <div className={
-          classNames({
-            [styles['g-modal__body']]: true,
-            [styles['g-modal__body--align-top']]: align === 'top',
-            [styles['g-modal__body--align-center']]: align === 'center',
-            [styles['g-modal__body--align-bottom']]: align === 'bottom',
-          })}
-             id={id}
+              classNames({
+                [styles['g-modal__body']]: true,
+                [styles['g-modal__body--align-top']]: align === 'top',
+                [styles['g-modal__body--align-center']]: align === 'center',
+                [styles['g-modal__body--align-bottom']]: align === 'bottom',
+              })}
+             id={modalId}
              role={'dialog'}
              tabIndex={-1}
              aria-label={title}
              aria-modal={true}
-             ref={ref}>
+             onKeyDown={handleModalKeydown}
+             ref={modalRef}>
 
           <div className={styles['g-modal__head']}>
             <button className={styles['g-modal__close']} onClick={doClose}>
               <span>Close</span>
-              <Icon size={'sm'} aria-hidden={true}>
+              <Icon size={'md'} aria-hidden={true}>
                 <FontAwesomeIcon icon={faTimes}/>
               </Icon>
             </button>
           </div>
 
-          <div className={styles['g-modal__content']}>
+          <div className={styles['g-modal__content']}
+               ref={modalContentRef}>
             {children}
           </div>
         </div>
