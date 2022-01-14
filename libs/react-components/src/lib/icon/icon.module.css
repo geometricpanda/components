@@ -15,22 +15,22 @@
 }
 
 .g-icon--sm {
-  --icon-padding: 0.0625rem;
-  --icon-size: 1rem;
+  --icon-padding: var(--theme-icon-padding-sm);
+  --icon-size: var(--theme-icon-size-sm);
 }
 
 .g-icon--md {
-  --icon-padding: 0.125rem;
-  --icon-size: 1.5rem;
+  --icon-padding: var(--theme-icon-padding-md);
+  --icon-size: var(--theme-icon-size-md);
 }
 
 .g-icon--lg {
-  --icon-padding: 0.1875rem;
-  --icon-size: 2rem;
+  --icon-padding: var(--theme-icon-padding-lg);
+  --icon-size: var(--theme-icon-size-lg);
 }
 
 .g-icon--xl {
-  --icon-padding: 0.25rem;
-  --icon-size: 2.5rem;
+  --icon-padding: var(--theme-icon-padding-xl);
+  --icon-size: var(--theme-icon-size-xl);
 }
 

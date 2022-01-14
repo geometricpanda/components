@@ -39,11 +39,12 @@
         "passWithNoTests": true
       }
     },
-    "storybook": {
+    "serve": {
       "executor": "@nrwl/storybook:storybook",
       "options": {
         "uiFramework": "@storybook/react",
         "port": 4400,
+        "host": "0.0.0.0",
         "config": {
           "configFolder": "libs/react-components/.storybook"
         }

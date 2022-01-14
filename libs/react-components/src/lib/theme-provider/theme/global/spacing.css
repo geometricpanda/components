@@ -2,8 +2,10 @@
   --theme-gutter: 0.5rem;
   --theme-gap: 1rem;
 
+  --theme-max-width: 75em;
+
   --theme-spacing-2xs: 0.25rem; /* 4px */
-  --theme-spacing-xs: 0.5rem;   /* 18px */
+  --theme-spacing-xs: 0.5rem;   /* 8px */
   --theme-spacing-sm: 0.75rem;  /* 12px */
   --theme-spacing-md: 1rem;     /* 16px */
   --theme-spacing-lg: 1.5rem;   /* 24px */
