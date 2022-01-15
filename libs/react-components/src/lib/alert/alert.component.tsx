@@ -34,7 +34,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(({
       return
     }
     ensuredForwardRef.current.focus();
-  }, [ref]);
+  }, [ensuredForwardRef]);
 
   useEffect(() => {
     switch (state) {

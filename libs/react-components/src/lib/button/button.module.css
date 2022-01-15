@@ -23,6 +23,16 @@
   text-decoration: none;
 }
 
+.g-button:not(.g-button--media-only) {
+  width: 100%;
+}
+
+@media (--viewport-sm) {
+  .g-button:not(.g-button--media-only) {
+    width: auto;
+  }
+}
+
 .g-button:focus-visible {
   outline: var(--theme-focus-outline);
   outline-offset: var(--theme-focus-outline-offset);

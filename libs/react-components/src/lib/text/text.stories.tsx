@@ -95,7 +95,7 @@ StateError.args = {
 }
 
 export const MarginBottom = Template.bind({});
-StateError.storyName = 'Margin Bottom';
-StateError.args = {
+MarginBottom.storyName = 'Margin Bottom';
+MarginBottom.args = {
   marginBottom: true,
 }
