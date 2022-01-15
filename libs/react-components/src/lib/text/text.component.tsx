@@ -18,7 +18,7 @@ export const Text: FC<TextProps> = ({
   weight,
   state,
   children,
-  marginBottom = true,
+  marginBottom,
   ...props
 }: TextProps) => {
 

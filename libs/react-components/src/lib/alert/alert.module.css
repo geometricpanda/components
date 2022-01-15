@@ -1,0 +1,57 @@
+.g-alert {
+  --g-alert-color: var(--theme-color-20);
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas:
+    'icon head'
+    'icon body';
+
+  column-gap: var(--theme-spacing-sm);
+  row-gap: var(--theme-spacing-xs);
+  padding: var(--theme-spacing-sm);
+  border: var(--theme-border-width) solid var(--g-alert-color);
+  border-left-width: calc(var(--theme-border-width) * 2);
+  border-radius: var(--theme-border-radius);
+}
+
+.g-alert:focus {
+  outline: none;
+}
+
+@media (--viewport-md) {
+  .g-alert {
+    padding: var(--theme-spacing-md);
+    column-gap: var(--theme-spacing-md);
+    row-gap: var(--theme-spacing-sm);
+  }
+}
+
+.g-alert--warning {
+  --g-alert-color: var(--theme-color-warning);
+}
+
+.g-alert--info {
+  --g-alert-color: var(--theme-color-info);
+}
+
+.g-alert--success {
+  --g-alert-color: var(--theme-color-success);
+}
+
+.g-alert--error {
+  --g-alert-color: var(--theme-color-error);
+}
+
+.g-alert__icon {
+  color: var(--g-alert-color);
+  grid-area: icon;
+}
+
+.g-alert__head {
+  grid-area: head;
+}
+
+.g-alert__body {
+  grid-area: body;
+}
