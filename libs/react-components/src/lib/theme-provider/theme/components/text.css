@@ -1,0 +1,39 @@
+:root {
+
+  --theme-type-heading-color: var(--theme-color-0);
+  --theme-type-color: var(--theme-color-20);
+  --theme-type-font-size: 1rem;
+  --theme-type-letter-spacing: -0.5px;
+  --theme-type-weight: var(--theme-font-weight-regular);
+  --theme-type-line-height: 1.5rem;
+
+  --theme-type-color-sm: var(--theme-type-color);
+  --theme-type-font-size-sm: 0.875rem;
+  --theme-type-font-weight-sm: var(--theme-font-weight-regular);
+  --theme-type-line-height-sm:  calc(var(--theme-type-font-size-sm) * 1.5);
+  --theme-type-letter-spacing-sm: var(--theme-type-letter-spacing);
+
+  --theme-type-color-md: var(--theme-type-heading-color);
+  --theme-type-font-size-md: 1.2rem;
+  --theme-type-font-weight-md: var(--theme-font-weight-bold);
+  --theme-type-line-height-md:  calc(var(--theme-type-font-size-md) * 1.5);
+  --theme-type-letter-spacing-md: var(--theme-type-letter-spacing);
+
+  --theme-type-color-lg: var(--theme-type-heading-color);
+  --theme-type-font-size-lg: 1.5rem;
+  --theme-type-font-weight-lg: var(--theme-font-weight-bold);
+  --theme-type-line-height-lg:  calc(var(--theme-type-font-size-lg) * 1.5);
+  --theme-type-letter-spacing-lg: var(--theme-type-letter-spacing);
+
+  --theme-type-color-xl: var(--theme-type-heading-color);
+  --theme-type-font-size-xl: 1.8rem;
+  --theme-type-font-weight-xl: var(--theme-font-weight-bold);
+  --theme-type-line-height-xl: calc(var(--theme-type-font-size-xl) * 1.5);
+  --theme-type-letter-spacing-xl: var(--theme-type-letter-spacing);
+
+  --theme-type-color-2xl: var(--theme-type-heading-color);
+  --theme-type-font-size-2xl: 2rem;
+  --theme-type-font-weight-2xl: var(--theme-font-weight-bold);
+  --theme-type-line-height-2xl: calc(var(--theme-type-font-size-2xl) * 1.4);
+  --theme-type-letter-spacing-2xl: var(--theme-type-letter-spacing);
+}

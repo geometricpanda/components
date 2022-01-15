@@ -60,14 +60,14 @@
 }
 
 .g-accordion-item__title {
-  font-size: var(--theme-font-size-base);
-  line-height: var(--theme-line-height-base);
+  font-size: var(--theme-type-font-size);
+  line-height: var(--theme-type-line-height);
   font-family: var(--theme-font-family);
   font-weight: var(--theme-font-weight-regular);
-  letter-spacing: var(--theme-font-letter-spacing-base);
+  letter-spacing: var(--theme-type-letter-spacing);
   color: var(--theme-accordion-color);
   text-align: left;
-  margin-block: calc(var(--theme-font-size-base) / -8);
+  margin-block: calc(var(--theme-type-font-size) / -8);
 }
 
 .g-accordion-item__head[disabled] .g-accordion-item__title {

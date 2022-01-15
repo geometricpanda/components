@@ -1,0 +1,82 @@
+.g-text {
+  font-family: var(--theme-font-family);
+  color: var(--theme-type-color);
+  font-size: var(--theme-type-font-size);
+  font-weight: var(--theme-type-weight);
+  line-height: var(--theme-type-line-height);
+  letter-spacing: var(--theme-type-letter-spacing);
+  margin: 0;
+  padding: 0;
+}
+
+.g-text--size-sm {
+  color: var(--theme-type-color-sm);
+  font-size: var(--theme-type-font-size-sm);
+  font-weight: var(--theme-type-font-weight-sm);
+  line-height: var(--theme-type-line-height-sm);
+  letter-spacing: var(--theme-type-letter-spacing-sm);
+}
+
+.g-text--size-md {
+  color: var(--theme-type-color-md);
+  font-size: var(--theme-type-font-size-md);
+  font-weight: var(--theme-type-font-weight-md);
+  line-height: var(--theme-type-line-height-md);
+  letter-spacing: var(--theme-type-letter-spacing-md);
+}
+
+.g-text--size-lg {
+  color: var(--theme-type-color-lg);
+  font-size: var(--theme-type-font-size-lg);
+  font-weight: var(--theme-type-font-weight-lg);
+  line-height: var(--theme-type-line-height-lg);
+  letter-spacing: var(--theme-type-letter-spacing-lg);
+}
+
+.g-text--size-xl {
+  color: var(--theme-type-color-xl);
+  font-size: var(--theme-type-font-size-xl);
+  font-weight: var(--theme-type-font-weight-xl);
+  line-height: var(--theme-type-line-height-xl);
+  letter-spacing: var(--theme-type-letter-spacing-xl);
+}
+
+.g-text--size-2xl {
+  color: var(--theme-type-color-2xl);
+  font-size: var(--theme-type-font-size-2xl);
+  font-weight: var(--theme-type-font-weight-2xl);
+  line-height: var(--theme-type-line-height-2xl);
+  letter-spacing: var(--theme-type-letter-spacing-2xl);
+}
+
+.g-text--weight-light {
+  font-weight: var(--theme-font-weight-light);
+}
+
+.g-text--weight-regular {
+  font-weight: var(--theme-font-weight-regular);
+}
+
+.g-text--weight-bold {
+  font-weight: var(--theme-font-weight-bold);
+}
+
+.g-text--state-info {
+  color: var(--theme-color-info);
+}
+
+.g-text--state-warning {
+  color: var(--theme-color-warning);
+}
+
+.g-text--state-error {
+  color: var(--theme-color-error);
+}
+
+.g-text--state-success {
+  color: var(--theme-color-success);
+}
+
+.g-text--margin-bottom {
+  margin-bottom: var(--theme-spacing-md);
+}

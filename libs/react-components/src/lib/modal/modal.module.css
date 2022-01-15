@@ -90,11 +90,11 @@
   border: var(--theme-border-width) solid var(--theme-color-secondary);
   background-color: var(--theme-color-secondary-contrast);
   color: var(--theme-color-secondary);
-  font-size: var(--theme-font-size-base);
-  line-height: var(--theme-line-height-base);
+  font-size: var(--theme-type-font-size);
+  line-height: var(--theme-type-line-height);
   font-family: var(--theme-font-family);
-  font-weight: var(--theme-font-weight-bold);
-  letter-spacing: var(--theme-font-letter-spacing-base);
+  font-weight: var(--theme-font-weight-regular);
+  letter-spacing: var(--theme-type-letter-spacing);
   cursor: pointer;
   display: flex;
   align-items: center;
