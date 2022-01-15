@@ -42,9 +42,9 @@ export const Modal = ({
   const [prevFocus, setPrevFocus] = useState<HTMLElement>();
   const [modalId] = useState(id || generateUniqueId('modal'))
   const [locked, toggleLocked] = useToggle(false);
+
   useLockBodyScroll(locked);
   useKey('Escape', doClose);
-
 
   useLayoutEffect(() => {
     if (!modalRef.current) return;

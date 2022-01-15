@@ -11,11 +11,11 @@
   color: var(--button-color);
   padding-block: var(--theme-spacing-xs);
   padding-inline: var(--theme-spacing-lg);
-  font-size: var(--theme-font-size-base);
-  line-height: var(--theme-line-height-base);
+  font-size: var(--theme-type-font-size);
+  line-height: var(--theme-type-line-height);
   font-family: var(--theme-font-family);
   font-weight: var(--theme-font-weight-regular);
-  letter-spacing: var(--theme-font-letter-spacing-base);
+  letter-spacing: var(--theme-type-letter-spacing);
   cursor: pointer;
   border-radius: 50px;
   transition: var(--theme-transition-timing-fast);
