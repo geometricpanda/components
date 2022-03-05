@@ -1,1 +1,8 @@
 /* Your styles goes here. */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 48em;
+  margin: auto;
+}

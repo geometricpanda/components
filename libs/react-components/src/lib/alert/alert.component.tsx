@@ -1,40 +1,41 @@
 import type {IconDefinition} from '@fortawesome/fontawesome-common-types';
-import type {ReactNode, MutableRefObject} from 'react';
+import type {ReactNode, MutableRefObject, RefObject, ForwardedRef, Ref, LegacyRef} from 'react';
 
 import {faCheckCircle, faInfoCircle, faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {forwardRef, useCallback, useEffect, useState} from 'react';
-import {useEnsuredForwardedRef} from 'react-use';
+import {forwardRef, useEffect, useState} from 'react';
+import {ensuredForwardRef, useEffectOnce, useEnsuredForwardedRef} from 'react-use';
 import classNames from 'classnames';
 
 import {Icon} from '../icon';
 import {Text} from '../text'
 
 import styles from './alert.module.css';
+import {announce} from '@react-aria/live-announcer';
 
 export interface AlertProps {
   state?: 'info' | 'warning' | 'success' | 'error',
   title: string;
   children: ReactNode,
-  focusOnMount?: boolean,
+  liveAnnounce?: boolean;
 }
 
-export const Alert = forwardRef<HTMLDivElement, AlertProps>(({
+export const Alert = ensuredForwardRef<HTMLDivElement, AlertProps>(({
   state = 'info',
   title,
-  focusOnMount,
   children,
+  liveAnnounce,
 }, ref) => {
 
   const [icon, setIcon] = useState<IconDefinition>(faInfoCircle);
-  const ensuredForwardRef = useEnsuredForwardedRef<HTMLDivElement>(ref as MutableRefObject<HTMLDivElement>);
 
-  const doFocus = useCallback(() => {
-    if (!ensuredForwardRef.current) {
-      return
+  useEffectOnce(() => {
+    if (liveAnnounce && ref) {
+      const _ref = ref as RefObject<HTMLDivElement>;
+      const text = _ref.current!.innerText;
+      announce(text, 'polite')
     }
-    ensuredForwardRef.current.focus();
-  }, [ensuredForwardRef]);
+  });
 
   useEffect(() => {
     switch (state) {
@@ -51,20 +52,6 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(({
     }
   }, [state, setIcon]);
 
-  useEffect(() => {
-    if (!focusOnMount) {
-      return
-    }
-
-    const cancel = setTimeout(() => doFocus(), 150);
-
-    return () => {
-      if (cancel) {
-        clearTimeout(cancel);
-      }
-    }
-  }, [doFocus, focusOnMount])
-
   const className = classNames({
     [styles['g-alert']]: true,
     [styles['g-alert--info']]: state === 'info',
@@ -75,9 +62,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(({
 
   return (
     <div className={className}
-         role="alert"
-         aria-atomic="true"
-         ref={ensuredForwardRef}
+         ref={ref}
          tabIndex={-1}>
 
       <div aria-hidden={true}
@@ -87,7 +72,7 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(({
         </Icon>
       </div>
 
-      <div className={styles['g-alert__head']}>
+      <div className={styles['g-alert__head']} aria-live="polite">
         <Text size={'md'}>{title}</Text>
       </div>
 

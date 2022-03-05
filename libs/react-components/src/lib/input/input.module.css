@@ -1,0 +1,31 @@
+.g-input {
+  background-color: var(--theme-color-100);
+  border: 2px solid var(--theme-color-secondary);
+}
+
+.g-input--error {
+  border-color: var(--theme-color-error);
+}
+
+.g-input:focus-within {
+  outline: var(--theme-focus-outline);
+  outline-offset: var(--theme-focus-outline-offset);
+  box-shadow: var(--theme-focus-box-shadow);
+}
+
+.g-input__control {
+  border: 0;
+  margin: 0;
+  padding: var(--theme-spacing-xs);
+  font-size: var(--theme-type-font-size);
+  line-height: var(--theme-type-line-height);
+  font-family: var(--theme-font-family);
+  font-weight: var(--theme-font-weight-regular);
+  box-sizing: border-box;
+  width: 100%;
+  background-color: transparent;
+}
+
+.g-input__control:focus {
+  outline: none;
+}

@@ -33,7 +33,7 @@
   }
 }
 
-.g-button:focus-visible {
+.g-button:focus {
   outline: var(--theme-focus-outline);
   outline-offset: var(--theme-focus-outline-offset);
   box-shadow: var(--theme-focus-box-shadow);

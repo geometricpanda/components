@@ -1,0 +1,22 @@
+.g-anchor {
+  color: var(--theme-color-primary);
+  font-family: var(--theme-font-family);
+  font-size: var(--theme-type-font-size);
+  line-height: var(--theme-type-line-height);
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.g-anchor:focus {
+  outline: var(--theme-focus-outline);
+  outline-offset: var(--theme-focus-outline-offset);
+  box-shadow: var(--theme-focus-box-shadow);
+}
+
+.g-anchor--secondary {
+  color: var(--theme-color-secondary);
+}
